@@ -1,0 +1,201 @@
+/* Global color variables for easy theme changes */
+:root {
+    --primary: gray;
+    --primary-dark: black;
+    --bg-color: lightgray;
+    --income: green;
+    --expense: red;
+    --border: black;
+}
+
+/* Page base styling */
+body {
+    font-family: 'Inter', sans-serif;
+    background: var(--bg-color);
+    color: black;
+    display: flex;
+    justify-content: center;
+    padding: 40px 20px;
+    margin: 0;
+}
+
+/* Main app container */
+.app-wrapper {
+    width: 100%;
+    max-width: 420px;
+    background: white;
+    padding: 25px;
+    border-radius: 12px;
+    border: 3px solid black;
+    box-shadow: 6px 6px black;
+}
+
+/* App title */
+header h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+/* Balance display box */
+.balance-box {
+    background: black;
+    color: white;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+    margin-bottom: 25px;
+}
+
+/* Balance amount text */
+#total-balance {
+    font-size: 28px;
+    font-weight: bold;
+}
+
+/* Wrapper for each input block */
+.input-group {
+    margin-bottom: 15px;
+}
+
+/* Two-column layout for amount + type */
+.input-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 10px;
+}
+
+/* Input labels */
+label {
+    display: block;
+    font-size: 12px;
+    font-weight: bold;
+    color: gray;
+    margin-bottom: 5px;
+}
+
+/* Text fields and dropdown */
+input,
+select {
+    width: 100%;
+    box-sizing: border-box;
+    padding: 10px;
+    border: 2px solid black;
+    border-radius: 6px;
+    font-size: 14px;
+}
+
+/* Input focus effect */
+input:focus,
+select:focus {
+    background: #f0f0f0;
+    outline: none;
+}
+
+/* Add transaction button */
+.add-btn {
+    width: 100%;
+    padding: 12px;
+    background: black;
+    color: white;
+    border: 2px solid black;
+    font-weight: bold;
+    cursor: pointer;
+    border-radius: 6px;
+    box-shadow: 3px 3px black;
+}
+
+/* Pressed button effect */
+.add-btn:active {
+    transform: translate(2px, 2px);
+    box-shadow: none;
+}
+
+/* Filter buttons container */
+.filter-group {
+    display: flex;
+    gap: 5px;
+    margin: 20px 0;
+}
+
+/* Individual filter button */
+.filter-btn {
+    flex: 1;
+    padding: 8px;
+    border: 2px solid black;
+    background: white;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+/* Active filter button */
+.filter-btn.active {
+    background: lightgray;
+}
+
+/* Remove default list styling */
+ul {
+    list-style: none;
+    padding: 0;
+}
+
+/* Each transaction item */
+.entry-item {
+    display: flex;
+    justify-content: space-between;
+    padding: 12px;
+    border: 2px solid black;
+    margin-bottom: 10px;
+    border-radius: 6px;
+    background: white;
+}
+
+/* Green indicator for income */
+.income-type {
+    border-left: 6px solid var(--income);
+}
+
+/* Red indicator for expense */
+.expense-type {
+    border-left: 6px solid var(--expense);
+}
+
+/* Transaction title */
+.entry-title {
+    font-weight: bold;
+}
+
+/* Transaction category text */
+.entry-category {
+    font-size: 11px;
+    color: gray;
+    text-transform: capitalize;
+}
+
+/* Right side (amount + delete) */
+.entry-right {
+    display: flex;
+    gap: 10px;
+    align-items: center;
+}
+
+/* Delete button */
+.del-btn {
+    border: 1px solid gray;
+    background: white;
+    font-size: 11px;
+    cursor: pointer;
+    padding: 2px 5px;
+}
+
+/* Delete hover effect */
+.del-btn:hover {
+    color: red;
+    border-color: red;
+}
+
+/* Message when no records exist */
+.empty-state {
+    text-align: center;
+    color: gray;
+    margin-top: 20px;
+}

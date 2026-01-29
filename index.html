@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <!-- Character encoding -->
+    <meta charset="UTF-8">
+
+    <!-- Makes layout responsive on mobile devices -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- Page title -->
+    <title>Expense Tracker</title>
+
+    <!-- Google font -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&display=swap" rel="stylesheet">
+
+    <!-- Main stylesheet -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- Main application container -->
+    <div class="app-wrapper">
+
+        <!-- Header section -->
+        <header>
+            <h2>Expense Tracker</h2>
+
+            <!-- Balance display -->
+            <div class="balance-box">
+                <small>Current Balance</small><br>
+                <span id="total-balance">$0.00</span>
+            </div>
+        </header>
+
+        <!-- Transaction input form -->
+        <form id="tracker-form">
+
+            <!-- Description input -->
+            <div class="input-group">
+                <label>Description</label>
+                <input type="text" id="desc-input" required>
+            </div>
+
+            <!-- Amount and type row -->
+            <div class="input-row">
+
+                <!-- Amount input -->
+                <div class="input-group">
+                    <label>Amount</label>
+                    <input type="number" id="amt-input" step="0.01" required>
+                </div>
+
+                <!-- Income / Expense selector -->
+                <div class="input-group">
+                    <label>Type</label>
+                    <select id="type-input">
+                        <option value="expense">Expense</option>
+                        <option value="income">Income</option>
+                    </select>
+                </div>
+            </div>
+
+            <!-- Submit button -->
+            <button type="submit" class="add-btn">Add Transaction</button>
+        </form>
+
+        <!-- Filter buttons -->
+        <nav class="filter-group">
+            <button class="filter-btn active" onclick="changeView('all', this)">All</button>
+            <button class="filter-btn" onclick="changeView('income', this)">Income</button>
+            <button class="filter-btn" onclick="changeView('expense', this)">Expense</button>
+        </nav>
+
+        <!-- Transaction list -->
+        <ul id="transaction-list"></ul>
+
+    </div>
+
+    <!-- Main JavaScript file -->
+    <script src="script.js"></script>
+</body>
+
+</html>
